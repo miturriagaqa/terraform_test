@@ -10,17 +10,14 @@ terraform {
 }
 
 provider "aws" {
-  profile = "sales"
   region  = "us-west-2"
-  access_key = var.access_key
-  secret_key = var.secret_key
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-08d70e59c07c61a3a"
+  ami           = "ami-830c94e3"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "MishAWSExServerInstance"
+    Name = "MishExampleAppServerInstance"
   }
 }
