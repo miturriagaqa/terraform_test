@@ -18,6 +18,7 @@ provider "aws" {
 resource "aws_instance" "app_server"{
   ami           = "ami-0b301ce3ce347599c"
   instance_type = "t2.micro"
+  key_name = var.key_name
   
   tags = {
     Name = "MishAwsTfInstance"
