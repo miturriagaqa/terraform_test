@@ -31,4 +31,5 @@ output "app_server_ami_id" {
 
 output "secret_key_output" {
   value     = var.my_secret_key
+  sensitive = true
 }
