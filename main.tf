@@ -22,5 +22,9 @@ resource "aws_instance" "app_server"{
   tags = {
     Name = "MishAwsTfInstance"
   }
+}
+
+output "app_server_ami_id" {
+  value     = aws_instance.app_server.ami
   sensitive = true
 }
