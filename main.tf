@@ -15,14 +15,11 @@ provider "aws" {
   secret_key = var.secret_key
 }
 
-resource "aws_key_pair" "deployer" {
-  key_name = var.key_name
-}
+key_name = var.key_name
 
-resource "aws_instance" "deployer"{
+resource "aws_instance" "app_server"{
   ami           = "ami-0b301ce3ce347599c"
   instance_type = "t2.micro"
-  key_name = aws_key_pair.deployer.key_name
   
   tags = {
     Name = "MishAwsTfInstance"
