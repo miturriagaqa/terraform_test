@@ -19,7 +19,7 @@ resource "aws_key_pair" "deployer" {
   key_name = var.key_name
 }
 
-resource "aws_instance" "app_server" "deployer"{
+resource "aws_instance" "deployer"{
   ami           = "ami-0b301ce3ce347599c"
   instance_type = "t2.micro"
   key_name = aws_key_pair.deployer.key_name
