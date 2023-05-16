@@ -15,7 +15,9 @@ provider "aws" {
   secret_key = var.secret_key
 }
 
-key_name = var.key_name
+resource "aws_key_pair" "example_keypair" {
+  key_name   = var.keypair_name
+}
 
 resource "aws_instance" "app_server"{
   ami           = "ami-0b301ce3ce347599c"
