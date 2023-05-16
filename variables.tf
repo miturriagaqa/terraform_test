@@ -13,3 +13,9 @@ variable "instance_name" {
   type        = string
   default     = "mishawsterraform"
 }
+
+variable "keypair_name" {
+  description = "Name of the key pair"
+  type        = string
+  default     = "mish_key_pair"
+}
