@@ -7,7 +7,9 @@ variable "secret_key" {
   description = "Value of the Secret Key for AWS"
   type        = string
 }
-variable "key_name" {
-  description = "Value of the Key Pair for AWS"
+
+variable "instance_name" {
+  description = "Value of the Name tag for the EC2 instance"
   type        = string
+  default     = "mishawsterraform"
 }
