@@ -24,12 +24,16 @@ resource "aws_instance" "app_server"{
 
 output "app_server_ami_id" {
   value     = aws_instance.app_server.ami
-  sensitive = true
 }
+
+output "instance_name" {
+  value     = aws_instance.app_server.tags.Name
+}
+
 
 # Output hardcoded values
 output "message" {
-  value = "Hello, Terraform!"
+  value = "Hello, US FRAMEWORK TEAM!"
 }
 
 output "number" {
