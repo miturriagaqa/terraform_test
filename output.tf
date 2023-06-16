@@ -31,6 +31,8 @@ output "map" {
   }
 }
 
+# End of hardcoded values
+
 output "instance_id" {
   description = "ID of the EC2 instance"
   value       = aws_instance.app_server.id
@@ -51,4 +53,8 @@ output "vpc_security_group_ids" {
 
 output "availability_zone" {
   value = aws_instance.app_server.availability_zone
+}
+
+output "app_server_key_name" {
+  value     = aws_instance.app_server.key_name
 }
