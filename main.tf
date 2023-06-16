@@ -25,4 +25,12 @@ resource "aws_instance" "app_server"{
   tags = {
     Name = var.instance_name
   }
+    user_data = <<EOF
+#!/bin/bash
+yum update -y
+yum install -y httpd
+echo "Hello World" > /var/www/html/index.html
+systemctl start httpd
+systemctl enable httpd
+EOF
 }
