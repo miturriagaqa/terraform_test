@@ -50,8 +50,8 @@ output "list" {
 
 output "map" {
   value = {
-    key1 = "value1"
-    key2 = "value2"
+  "AWS_ACCESS_KEY_ID": "{{environment.resource_handler.serviceaccount}}",
+  "AWS_SECRET_ACCESS_KEY": "{{environment.resource_handler.servicepasswd}}"
   }
 }
 
