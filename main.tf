@@ -24,15 +24,16 @@ resource "aws_instance" "app_server"{
 
 output "app_server_ami_id" {
   value     = aws_instance.app_server.ami
+  sensitive = false
 }
 
 output "instance_name" {
   value     = aws_instance.app_server.tags.Name
 }
 
-output "app_server_instance_type" {
-  value     = aws_instance.app_server.instance_type
-}
+# output "app_server_instance_type" {
+#   value     = aws_instance.app_server.instance_type
+# }
 
 
 # Output hardcoded values
